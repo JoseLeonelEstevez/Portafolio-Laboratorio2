@@ -1,0 +1,52 @@
+/* 1. Importación de Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+/* 2. Configuración Base */
+:root {
+    --primary-blue: #1e3a8a;
+    --accent-blue: #3b82f6;
+    --accent-orange: #f97316;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Ajuste para que el header fijo no tape el contenido al navegar */
+    scroll-padding-top: 85px; 
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+/* 4. Estilización de la barra de desplazamiento (Scrollbar) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* 5. Efecto para las tarjetas de proyectos */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+.text-gradient {
+    background: linear-gradient(to right, #1e3a8a, #3b82f6);
+    background-clip: text; /* Propiedad estándar que pedía el error */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
